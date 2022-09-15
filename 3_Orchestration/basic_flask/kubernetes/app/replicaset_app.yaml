@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: basic-flask-app-replicaset
+  labels:
+    app: basic-flask-app
+    model: give_me_some_credit
+spec:
+  replicas: 3
+  template:
+    metadata:
+      name: basic-flask-pod
+      labels:
+        app: basic-flask-app
+        model: give_me_some_credit
+    spec:
+      containers:
+        - name: basic-flask
+          image: charlescazals/basic_flask_app
+          ports:
+            - containerPort: 5000
+  selector:
+    matchLabels:
+      app: give_me_some_credit

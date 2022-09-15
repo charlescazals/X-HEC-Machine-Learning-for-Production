@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  my-postgres-db:
+    #image: charlescazals/basic_flask_postgres_db
+    build: database/.
+    ports:
+      - "5432:5432"
+  my-app:
+    #image: charlescazals/basic_flask_app
+    build: app/.
+    ports:
+      - "5000:5000"
+    depends_on:
+      - my-postgres-db

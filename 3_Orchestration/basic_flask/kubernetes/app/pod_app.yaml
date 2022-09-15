@@ -1,0 +1,13 @@
+ apiVersion: v1
+ kind: Pod
+ metadata:
+   name: basic-flask-app-pod
+   labels:
+     app: basic-flask-app
+     model: give_me_some_credit
+ spec:
+   containers:
+     - name: basic-flask-app
+       image: charlescazals/basic_flask_app
+       ports:
+         - containerPort: 5000
