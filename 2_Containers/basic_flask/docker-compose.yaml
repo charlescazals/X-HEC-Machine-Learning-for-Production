@@ -6,10 +6,20 @@ services:
     build: database/.
     ports:
       - "5432:5432"
+    #expose:
+    #  - 5000
   my-app:
     #image: charlescazals/basic_flask_app
     build: app/.
     ports:
       - "5000:5000"
+    #expose:
+    #  - 5000
     depends_on:
       - my-postgres-db
+  nginx:
+    build: nginx/.
+    ports:
+      - 1337:80
+    depends_on:
+      - my-app
