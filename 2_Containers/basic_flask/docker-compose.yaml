@@ -7,7 +7,7 @@ services:
     ports:
       - "5432:5432"
     #expose:
-    #  - 5000
+    #  - 5432
   my-app:
     #image: charlescazals/basic_flask_app
     build: app/.
