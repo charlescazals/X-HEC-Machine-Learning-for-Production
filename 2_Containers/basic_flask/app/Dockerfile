@@ -6,4 +6,4 @@ COPY . /opt/app
 
 RUN python3 -m pip install -r /opt/app/requirements.txt
 
-CMD gunicorn --workers 9 --bind 0.0.0.0:5000 opt.app.app:app
+CMD FLASK_APP="./opt/app/app.py" flask run --host=0.0.0.0
