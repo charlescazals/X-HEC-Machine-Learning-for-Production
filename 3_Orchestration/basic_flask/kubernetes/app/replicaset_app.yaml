@@ -21,4 +21,5 @@ spec:
             - containerPort: 5000
   selector:
     matchLabels:
-      app: give_me_some_credit
+      app: basic-flask-app
+      model: give_me_some_credit

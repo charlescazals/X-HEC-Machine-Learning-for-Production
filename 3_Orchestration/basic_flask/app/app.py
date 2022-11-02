@@ -1,7 +1,6 @@
 import os
 
 from flask import Flask, request, jsonify
-import random
 import pandas as pd
 from joblib import dump, load
 from sqlalchemy import create_engine
@@ -11,7 +10,6 @@ from sklearn.ensemble import GradientBoostingClassifier
 app = Flask(__name__)
 
 ROOT_APP_FOLDER = "/opt/app"
-DATA_FILEPATH = os.path.join(ROOT_APP_FOLDER, 'data', 'cs-training.csv')
 MODEL_FILEPATH = os.path.join(ROOT_APP_FOLDER, 'models', 'model.joblib')
 
 DB_NAME = 'database'
