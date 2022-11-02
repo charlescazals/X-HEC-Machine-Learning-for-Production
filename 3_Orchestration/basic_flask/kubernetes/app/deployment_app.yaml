@@ -18,7 +18,7 @@ spec:
         - name: basic-flask
           image: charlescazals/basic_flask_app
           ports:
-            - containerPort: 5000
+            - containerPort: 5000 # informative only
   selector:
     matchLabels:
       app: basic-flask-app

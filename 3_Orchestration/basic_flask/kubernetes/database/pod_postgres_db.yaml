@@ -10,4 +10,4 @@ spec:
     - name: basic-flask-postgres-db
       image: charlescazals/basic_flask_postgres_db
       ports:
-        - containerPort: 5432
+        - containerPort: 5432 # informative only

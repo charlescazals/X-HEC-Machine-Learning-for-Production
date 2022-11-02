@@ -10,4 +10,4 @@
      - name: basic-flask-app
        image: charlescazals/basic_flask_app
        ports:
-         - containerPort: 5000
+         - containerPort: 5000 # informative only
