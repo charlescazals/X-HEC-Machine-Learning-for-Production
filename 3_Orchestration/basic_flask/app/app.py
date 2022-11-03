@@ -15,10 +15,10 @@ MODEL_FILEPATH = os.path.join(ROOT_APP_FOLDER, 'models', 'model.joblib')
 DB_NAME = 'database'
 DB_USER = 'myusername'
 DB_PASSWORD = 'mysecretpassword'
-DB_HOST = 'my-postgres-db'
+DB_SERVICE_NAME = 'my-postgres-db'
 DB_PORT = '5432'
 # Connect to the database
-POSTGRES_URL = f'postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}'
+POSTGRES_URL = f'postgresql://{DB_USER}:{DB_PASSWORD}@{DB_SERVICE_NAME}:{DB_PORT}/{DB_NAME}'
 db = create_engine(POSTGRES_URL)
 
 ALL_FIELDS = [
