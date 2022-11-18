@@ -6,7 +6,7 @@ metadata:
     app: basic-flask-app
     model: give_me_some_credit
 spec:
-  replicas: 3
+  replicas: 2
   template:
     metadata:
       name: basic-flask-pod
@@ -17,6 +17,11 @@ spec:
       containers:
         - name: basic-flask
           image: charlescazals/basic_flask_app
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "1Gi"
+
           ports:
             - containerPort: 5000 # informative only
   selector:
